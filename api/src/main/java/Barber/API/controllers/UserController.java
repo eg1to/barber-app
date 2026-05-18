@@ -1,4 +1,4 @@
-package Barber.API.controllers; 
+package Barber.API.controllers;
 
 import java.util.List;
 
@@ -9,24 +9,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import Barber.API.entities.Service;
-import Barber.API.repositories.ServiceRepository;
+import Barber.API.entities.User;
+import Barber.API.repositories.UserRepository;
 
-@RestController 
-@RequestMapping("/services")
-public class ServiceController {
+@RestController
+@RequestMapping("/users")
+public class UserController {
 
     @Autowired
-    private ServiceRepository serviceRepository;
+    private UserRepository userRepository;
 
     @PostMapping
-    public Service createService(@RequestBody Service newService) {
-        return serviceRepository.save(newService); 
+    public User createUser(@RequestBody User newUser) {
+        return userRepository.save(newUser);
     }
-
 
     @GetMapping
-    public List<Service> listAllServices() {
-        return serviceRepository.findAll();
+    public List<User> listAllUsers() {
+        return userRepository.findAll();
     }
+
+
 }
