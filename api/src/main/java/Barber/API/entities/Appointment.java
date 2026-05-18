@@ -3,6 +3,8 @@ package Barber.API.entities;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -31,7 +33,10 @@ public class Appointment {
     private Service service;
 
     private LocalDateTime appointmentTime;
+
+    @Enumerated(EnumType.STRING)
     private AppointmentStatus status;
+    
     private LocalDateTime createdAt;
 
 
