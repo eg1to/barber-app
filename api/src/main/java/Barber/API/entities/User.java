@@ -14,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer userId;
 
     private String name;
     private String email;
@@ -22,11 +22,11 @@ public class User {
     private String role;
     private LocalDateTime createdAt;
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
     public String getName() {
         return name;

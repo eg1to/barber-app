@@ -13,17 +13,17 @@ import jakarta.persistence.Table;
 public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer serviceId;
 
     private String title;
     private int duration;
     private BigDecimal price;
 
-    public Integer getId() {
-        return id;
+    public Integer getServiceId() {
+        return serviceId;
     }
-    public void setId(Integer id) {
-        this.id = id;
+    public void setServiceId(Integer serviceId) {
+        this.serviceId = serviceId;
     }
     public String getTitle() {
         return title;
